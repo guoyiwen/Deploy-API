@@ -1,0 +1,58 @@
+stages:
+ - build
+ - test
+ - package
+ - deploy
+ - release
+
+
+build:
+ stage: build
+ script:
+  - cd Deploy.API
+  - dotnet build
+
+
+test:
+  stage: test
+  script: 
+   - dotnet restore
+   - dotnet build
+   - cd minicover
+   - dotnet restore
+   - dotnet minicover instrument --workdir ../ --assemblies Deploy.API.UnitTests/bin/**/*.dll --sources Deploy.API/**/*.cs
+   - dotnet minicover reset
+   - cd ..
+   - dotnet test --no-build Deploy.API.UnitTests/Deploy.API.UnitTests.csproj
+   - cd minicover
+   - dotnet minicover report --workdir ../ --threshold 10
+   
+
+
+package:
+  stage: package
+  script: 
+   - cd Deploy.API
+   - docker build -t deploy:test .
+   - docker login --username=evan --password Pwd123456 192.168.0.203
+   - docker tag deploy:test 192.168.0.203/myproject/deploy:test
+   - docker push 192.168.0.203/myproject/deploy:test
+
+
+deploy:
+  stage: deploy
+  script:
+   - if [ $(docker ps -aq --filter name=userapi) ]; then docker rm -f userapi;fi 
+   - docker run -d -p 8003:80 --link db-mysql --network net_db --name userapi 192.168.0.203/myproject/deploy:test
+
+
+release:
+  stage: release
+  script: 
+   - cd Deploy.API
+   - kubectl apply -f deploy.yaml
+  only: 
+   - tags 
+
+ 
+ 

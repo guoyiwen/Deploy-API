@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy-api
+  namespace: netcore
+  labels: 
+    name: deploy-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: deploy-api
+  template:
+    metadata:
+      labels:
+        name: deploy-api
+    spec:
+      #nodeName: dev
+      #nodeSelector:
+      #  env_role: dev 
+      containers:
+      - name: deploy-api
+        image: 192.168.0.203/myproject/userapi:test
+        imagePullPolicy: Always 
+        livenessProbe: 
+          httpGet:
+            path: /healthCheck
+            port: 80
+          timeoutSeconds: 5 
+        readinessProbe: 
+          httpGet:
+            path: /healthCheck
+            port: 80
+          timeoutSeconds: 5 
+        ports:
+        - containerPort: 80
+      imagePullSecrets: 
+      - name: regsecretlocal
+       
+        
+        
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: deploy-api
+  namespace: netcore
+spec:
+  type: NodePort
+  ports:
+    - port: 80
+      targetPort: 80 
+  selector:
+    name: deploy-api

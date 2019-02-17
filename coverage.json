@@ -1,0 +1,155 @@
+{
+  "SourcePath": "D:\\project\\Deploy.API\\Deploy.API\\",
+  "HitsFile": "D:\\project\\Deploy.API\\Deploy.API\\coverage-hits.txt",
+  "ExtraAssemblies": [
+    "D:\\project\\Deploy.API\\Deploy.API\\Deploy.API.UnitTests\\bin\\Debug\\netcoreapp2.1\\MiniCover.HitServices.dll"
+  ],
+  "Assemblies": [
+    {
+      "Name": "Deploy.API",
+      "SourceFiles": {
+        "Deploy.API\\Controllers\\ValuesController.cs": {
+          "Instructions": [
+            {
+              "Id": 10,
+              "StartLine": 17,
+              "EndLine": 17,
+              "StartColumn": 13,
+              "EndColumn": 36,
+              "Class": "Deploy.API.Controllers.ValuesController",
+              "Method": "Get",
+              "MethodFullName": "Microsoft.AspNetCore.Mvc.ActionResult`1<System.String> Deploy.API.Controllers.ValuesController::Get()",
+              "Instruction": "IL_0001: ldstr \"hello My V1.0\""
+            },
+            {
+              "Id": 11,
+              "StartLine": 24,
+              "EndLine": 24,
+              "StartColumn": 13,
+              "EndColumn": 32,
+              "Class": "Deploy.API.Controllers.ValuesController",
+              "Method": "Get",
+              "MethodFullName": "Microsoft.AspNetCore.Mvc.ActionResult`1<System.String> Deploy.API.Controllers.ValuesController::Get(System.Int32)",
+              "Instruction": "IL_0001: ldstr \"value-\""
+            }
+          ]
+        },
+        "Deploy.API\\Program.cs": {
+          "Instructions": [
+            {
+              "Id": 1,
+              "StartLine": 17,
+              "EndLine": 17,
+              "StartColumn": 13,
+              "EndColumn": 54,
+              "Class": "Deploy.API.Program",
+              "Method": "Main",
+              "MethodFullName": "System.Void Deploy.API.Program::Main(System.String[])",
+              "Instruction": "IL_0001: ldarg args"
+            },
+            {
+              "Id": 2,
+              "StartLine": 21,
+              "EndLine": 22,
+              "StartColumn": 13,
+              "EndColumn": 39,
+              "Class": "Deploy.API.Program",
+              "Method": "CreateWebHostBuilder",
+              "MethodFullName": "Microsoft.AspNetCore.Hosting.IWebHostBuilder Deploy.API.Program::CreateWebHostBuilder(System.String[])",
+              "Instruction": "IL_0000: ldarg args"
+            }
+          ]
+        },
+        "Deploy.API\\Startup.cs": {
+          "Instructions": [
+            {
+              "Id": 3,
+              "StartLine": 17,
+              "EndLine": 17,
+              "StartColumn": 9,
+              "EndColumn": 53,
+              "Class": "Deploy.API.Startup",
+              "Method": ".ctor",
+              "MethodFullName": "System.Void Deploy.API.Startup::.ctor(Microsoft.Extensions.Configuration.IConfiguration)",
+              "Instruction": "IL_0000: ldarg "
+            },
+            {
+              "Id": 4,
+              "StartLine": 19,
+              "EndLine": 19,
+              "StartColumn": 13,
+              "EndColumn": 43,
+              "Class": "Deploy.API.Startup",
+              "Method": ".ctor",
+              "MethodFullName": "System.Void Deploy.API.Startup::.ctor(Microsoft.Extensions.Configuration.IConfiguration)",
+              "Instruction": "IL_0008: ldarg "
+            },
+            {
+              "Id": 5,
+              "StartLine": 22,
+              "EndLine": 22,
+              "StartColumn": 47,
+              "EndColumn": 51,
+              "Class": "Deploy.API.Startup",
+              "Method": "get_Configuration",
+              "MethodFullName": "Microsoft.Extensions.Configuration.IConfiguration Deploy.API.Startup::get_Configuration()",
+              "Instruction": "IL_0000: ldarg "
+            },
+            {
+              "Id": 6,
+              "StartLine": 27,
+              "EndLine": 27,
+              "StartColumn": 13,
+              "EndColumn": 89,
+              "Class": "Deploy.API.Startup",
+              "Method": "ConfigureServices",
+              "MethodFullName": "System.Void Deploy.API.Startup::ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)",
+              "Instruction": "IL_0001: ldarg services"
+            },
+            {
+              "Id": 7,
+              "StartLine": 33,
+              "EndLine": 33,
+              "StartColumn": 13,
+              "EndColumn": 37,
+              "Class": "Deploy.API.Startup",
+              "Method": "Configure",
+              "MethodFullName": "System.Void Deploy.API.Startup::Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)",
+              "Instruction": "IL_0001: ldarg env"
+            },
+            {
+              "Id": 8,
+              "StartLine": 35,
+              "EndLine": 35,
+              "StartColumn": 17,
+              "EndColumn": 49,
+              "Class": "Deploy.API.Startup",
+              "Method": "Configure",
+              "MethodFullName": "System.Void Deploy.API.Startup::Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)",
+              "Instruction": "IL_000c: ldarg app"
+            },
+            {
+              "Id": 9,
+              "StartLine": 38,
+              "EndLine": 38,
+              "StartColumn": 13,
+              "EndColumn": 26,
+              "Class": "Deploy.API.Startup",
+              "Method": "Configure",
+              "MethodFullName": "System.Void Deploy.API.Startup::Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)",
+              "Instruction": "IL_0014: ldarg app"
+            }
+          ]
+        }
+      },
+      "Locations": [
+        {
+          "File": "D:\\project\\Deploy.API\\Deploy.API\\Deploy.API.UnitTests\\bin\\Debug\\netcoreapp2.1\\Deploy.API.dll",
+          "BackupFile": "D:\\project\\Deploy.API\\Deploy.API\\Deploy.API.UnitTests\\bin\\Debug\\netcoreapp2.1\\Deploy.API.uninstrumented.dll",
+          "PdbFile": "D:\\project\\Deploy.API\\Deploy.API\\Deploy.API.UnitTests\\bin\\Debug\\netcoreapp2.1\\Deploy.API.pdb",
+          "BackupPdbFile": "D:\\project\\Deploy.API\\Deploy.API\\Deploy.API.UnitTests\\bin\\Debug\\netcoreapp2.1\\Deploy.API.uninstrumented.pdb"
+        }
+      ]
+    }
+  ]
+}
