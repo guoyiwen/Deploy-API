@@ -24,12 +24,12 @@ spec:
         imagePullPolicy: Always 
         livenessProbe: 
           httpGet:
-            path: /healthCheck
+            path: /api/test
             port: 80
           timeoutSeconds: 5 
         readinessProbe: 
           httpGet:
-            path: /healthCheck
+            path: /api/test
             port: 80
           timeoutSeconds: 5 
         ports:
