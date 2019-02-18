@@ -1,4 +1,4 @@
-FROM dotnet-build as build-env
+FROM  microsoft/dotnet as build-env
 WORKDIR /code
 COPY *.csproj ./
 RUN dotnet restore  -nowarn:msb3202,nu1503
