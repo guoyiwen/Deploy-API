@@ -47,7 +47,8 @@ deploy:
   stage: deploy
   script:
    - if [ $(docker ps -aq --filter name=userapi) ]; then docker rm -f userapi;fi 
-   - docker run -d -p 8003:80 --link db-mysql --network net_db --name userapi 192.168.0.203/myproject/deploy:test
+   - docker run -d -p 8003:80 --link db-mysql --network net_db --name userapi registry.cn-hangzhou.aliyuncs.com/windows_evan/deploy:test
+   #- docker run -d -p 8003:80 --link db-mysql --network net_db --name userapi 192.168.0.203/myproject/deploy:test
 
 
 release:
