@@ -34,13 +34,10 @@ package:
   stage: package
   script: 
    - cd Deploy.API
-   - docker build -t deploy:test .
-   - docker login --username=13677488366@163.com --password vq52eweb registry.cn-hangzhou.aliyuncs.com
-   - docker tag deploy:test registry.cn-hangzhou.aliyuncs.com/windows_evan/deploy:test
-   - docker push registry.cn-hangzhou.aliyuncs.com/windows_evan/deploy:test
-   #- docker login --username=evan --password Pwd123456 192.168.0.203
-   #- docker tag deploy:test 192.168.0.203/myproject/deploy:test
-   #- docker push 192.168.0.203/myproject/deploy:test
+   - docker build -t deploy:test . 
+   - docker login --username=evan --password Pwd123456 192.168.0.203
+   - docker tag deploy:test 192.168.0.203/myproject/deploy:test
+   - docker push 192.168.0.203/myproject/deploy:test
 
 
 deploy:
