@@ -57,6 +57,7 @@ release:
   script: 
    - cd Deploy.API
    - sed -i 's/deploy:test/deploy:$$CI_COMMIT_TAG/g' deploy.yaml
+   - cat deploy.yaml
    - kubectl apply -f deploy.yaml
   only: 
    - tags 
