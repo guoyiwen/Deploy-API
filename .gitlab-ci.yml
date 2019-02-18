@@ -34,9 +34,8 @@ package:
   stage: package
   script: 
    - cd Deploy.API
-   - docker build -t deploy:test .
-   - echo "PWD:" $AL_TOKEN 
-   - docker login --username=13677488366@163.com --password $AL_TOKEN registry.cn-hangzhou.aliyuncs.com
+   - docker build -t deploy:test . 
+   - docker login --username $ALIYUN_NAME --password ALIYUN_TOKEN registry.cn-hangzhou.aliyuncs.com
    - docker tag deploy:test registry.cn-hangzhou.aliyuncs.com/windows_evan/deploy:test
    - docker push registry.cn-hangzhou.aliyuncs.com/windows_evan/deploy:test
    #- docker login --username=evan --password Pwd123456 192.168.0.203
