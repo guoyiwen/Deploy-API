@@ -34,7 +34,7 @@ namespace Deploy.API
             {
                 app.UseDeveloperExceptionPage();
             }
-
+//            app.UseHttpsRedirection();
             app.UseMvc();
         }
     }
