@@ -2,7 +2,7 @@ kind: pipeline
 name: default
 
 steps:
-- name: test
+- name: test2
   image: mcr.microsoft.com/dotnet/sdk:7.0
   commands:
   - dotnet build
